@@ -64,6 +64,7 @@ public class MgBeltUtils {
                 ItemStack d = b.copy();
                 d.stackSize = accepted;
                 a.setInventorySlotContents(slot, d);
+                a.markDirty();
             }
             return b.stackSize - accepted;
         } else if (matchesAll(c, b)) {
@@ -73,6 +74,7 @@ public class MgBeltUtils {
                 ItemStack d = c.copy();
                 d.stackSize += accepted;
                 a.setInventorySlotContents(slot, d);
+                a.markDirty();
             }
             return b.stackSize - accepted;
         }
