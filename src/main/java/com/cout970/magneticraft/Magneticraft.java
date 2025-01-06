@@ -135,6 +135,10 @@ public class Magneticraft {
             MgMinetweaker.init();
         }
 
+        /*
+    PFAA uses a dedicated petrochem line for oil processing. Disable the addition of MgC fuels to BC, IE, and RC so
+    we have to refine our oil.
+
         if (ManagerIntegration.BUILDCRAFT) {
             ManagerFluids.registerBCFuels();
         }
@@ -146,6 +150,8 @@ public class Magneticraft {
         if (ManagerIntegration.IE) {
             ManagerFluids.registerIEFuels();
         }
+
+         */
 
         ForgeChunkManager.setForcedChunkLoadingCallback(INSTANCE, new MinerChunkCallBack());
 //		if(DEBUG)printOreDict();
