@@ -59,10 +59,10 @@ public class TileCrusher extends TileMB_Base implements IGuiSync, IInventoryMana
             if (canCraft()) {
                 double speed = TileConductorLow.getEfficiency(cond.getVoltage(), ElectricConstants.MACHINE_WORK, ElectricConstants.BATTERY_CHARGE);
                 if (speed > 0) {
-                    speed *= 10;
+                    speed *= .5;
                     progress += speed;
-                    energy.addValue((float) EnergyConverter.RFtoW(speed * 10));
-                    cond.drainPower(EnergyConverter.RFtoW(speed * 10));
+                    energy.addValue((float) EnergyConverter.RFtoW(speed * 200));
+                    cond.drainPower(EnergyConverter.RFtoW(speed * 800));
                     if (progress >= MAX_PROGRESS) {
                         craft();
                         markDirty();
