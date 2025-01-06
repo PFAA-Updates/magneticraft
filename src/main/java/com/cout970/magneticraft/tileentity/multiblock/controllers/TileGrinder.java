@@ -69,10 +69,10 @@ public class TileGrinder extends TileMB_Base implements IInventoryManaged, ISide
             if (canCraft()) {
                 double speed = TileConductorLow.getEfficiency(cond.getVoltage(), ElectricConstants.MACHINE_WORK, ElectricConstants.BATTERY_CHARGE);
                 if (speed > 0) {
-                    speed *= 10;
+                    speed *= .5;
                     progress += speed;
-                    energy.addValue((float) EnergyConverter.RFtoW(speed * 10));
-                    cond.drainPower(EnergyConverter.RFtoW(speed * 10));
+                    energy.addValue((float) EnergyConverter.RFtoW(speed * 200));
+                    cond.drainPower(EnergyConverter.RFtoW(speed * 200));
                     if (progress >= maxProgress) {
                         craft();
                         markDirty();

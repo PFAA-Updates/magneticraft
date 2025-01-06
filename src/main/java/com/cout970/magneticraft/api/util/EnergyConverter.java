@@ -8,11 +8,11 @@ package com.cout970.magneticraft.api.util;
 public class EnergyConverter {
 
     //1W = 1J/t
-    public static final double RF_J = 10;            // 1RF = 10J | 1J = 0.1RF
-    public static final double EU_J = 40;            // 1EU = 40J | 1J = 0,025EU
-    public static final double STEAM_J = 20;        // 1mB = 20J | 1J = 0.05mB | 1 Burn tick = 5mB Steam = 100J
+    public static final double RF_J = 2.0;            // 1RF = 10J | 1J = 0.1RF
+    public static final double EU_J = 8.0;            // 1EU = 40J | 1J = 0,025EU
+    public static final double STEAM_J = 4.0;        // 1mB = 20J | 1J = 0.05mB | 1 Burn tick = 5mB Steam = 100J
     public static final double CALORIE_J = 0.2;    // 1cal = 0.2J | 1J = 5cal
-    public static final double FUEL_J = 100;        // 1 Burning tick = 100J
+    public static final double FUEL_J = 100.0;        // 1 Burning tick = 100J
     public static final double WATER_STEAM = 5;    // 1mB of Water = 5mB of Steam | 1mB Steam = 0.2 mB Water
     public static final double FUEL_CALORIE = 500; // 1 Burning tick = 500 cal | 1cal = 0.002 Burning ticks => 1mB Water == 5mB Steam | Calories needed to boil 1mB of water into 5mB of Steam
     public static final double MOL_MB = 8192;
@@ -131,7 +131,7 @@ public class EnergyConverter {
 	public static double PAtoPSI(double amount) {
 		return amount / PSI_PA;
 	}
-	
+
 	public static double PSItoPA(double amount) {
 		return amount * PSI_PA;
 	}
